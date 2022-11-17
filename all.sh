@@ -15,7 +15,7 @@ saved_branch=$(current_branch)
 git pull
 
 for branch in $(local_branches); do
-  if [[ "${branch}" != "main" && "${branch}" != "mainSentinel" ]]; then
+  if [[ "${branch}" != "main" && "${branch}" != "mainSentinel" && "${branch}" != "script-all" ]]; then
     echo
     git checkout "${branch}"
     git merge "main" -m "Merge main ${branch}."
